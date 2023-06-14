@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Roboto:wght@100;300;400;700&display=swap');
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+/*Paars #5722CD;*/
+/*Blauw #4845E4;*/
+/*Roze #ED4385;*/
+/*Zwart #0C0C0C (voor standaard tekst);*/
+/*Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services")
+Uitzonderingen:*/
+/*Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)*/
+/*Grijs #7A7A7A (voor de service-tegel tekst);*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --c-purple: #5722CD;
+    --c-blue: #4845E4;
+    --c-pink: #ED4385;
+    --c-black: #0C0C0C;
+    --c-light-purple: #F2F0FF;
+    --c-light-gray: #F3F6F9;
+    --c-gray: #7A7A7A;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+/* ------------------------------- 2. Typography ----------------------------------- */
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Merriweather', serif;
+}
+h1,h2{
+    font-size: 46px;
+}
+h3{
+    font-size: 36px;
+}
+h4{
+    font-size: 32px;
+}
+h5{
+    font-size: 32px;
+}
+h6{
+    font-size: 32px;
+    margin: 15px;
+}
+p{
+    margin: 30px;
+}
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+.outer-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*border: 2px solid black;*/
+}
+.inner-container{
+    flex-basis: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    /*border: 2px dashed orange;*/
+}
+
+/* --------------- 3.2 Other --------------------------- */
+button{
+    background-color: var(--c-pink);
+    color: white;
+    text-transform: uppercase;
+    padding: 25px 50px;
+    border-radius: 50px;
+    margin: 30px 0;
+}
+button:hover{
+    cursor: pointer;
+}
+a,
+a:visited,
+a:link {
+    text-decoration: none;
+    color: var(--c-blue);
+}
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+.header-navigation{
+    /*border: 2px dashed red;*/
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 30px;
+    font-size: 18px;
+}
+.header-navigation ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 400px;
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+.header-section{
+    background-color: var(--c-blue) ;
+    color: white;
+}
+.header-content-text{
+    text-align: center;
+    margin: 50px 0;
+    max-width: 900px;
+}
+/* --------------- 4.2 Introduction ------------------- */
+.intro-section{
+    background-color: white;
+    color: var(--c-purple);
+    text-align: center;
+}
+.intro-content-text{
+    max-width: 900px;
+    margin: 50px 0;
+}
+.intro-content-text p{
+    font-size: 18px;
+    color: var(--c-black);
+    font-weight: 700;
+}
+/* --- 4.3 Work --- */
+.work-section{
+
+}
+.work-content-wrapper{
+    /*border: 2px dashed green;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 100px 0;
+}
+.work-content-wrapper-1, .work-content-wrapper-3{
+    flex-direction: row-reverse;
+}
+.work-content-text{
+    /*border: 2px dashed red;*/
+    flex-basis: 500px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 20px;
+}
+.work-content-image-wrapper{
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+.work-content-image-wrapper img{
+    width: 100%;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
